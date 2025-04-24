@@ -127,7 +127,7 @@ For each abstraction, provide:
 List of file indices and paths present in the context:
 {file_listing_for_prompt}
 
-Format the output as a YAML list of dictionaries:
+Format the output as YAML:
 
 ```yaml
 - name: |
@@ -145,7 +145,10 @@ Format the output as a YAML list of dictionaries:
   file_indices:
     - 5 # path/to/another.js
 # ... up to 10 abstractions
-```"""
+```
+
+Now, provide the YAML output:
+"""
         response = call_llm(prompt)
 
         # --- Validation ---
@@ -384,6 +387,13 @@ Ideally, first explain those that are the most important or foundational, perhap
 
 Output the ordered list of abstraction indices, including the name in a comment for clarity. Use the format `idx # AbstractionName`.
 
+  - Provide a list of abstraction indices in the order they should be explained.
+  - Each entry must be a string in the exact format: `idx # AbstractionName`, where `idx` is the index (0 to {num_abstractions-1}) and `AbstractionName` matches the name from the provided list.
+  - Include **all** abstractions exactly once, using only the indices from the provided list.
+  - Do **not** include explanations, comments, or additional fields like 'From context'.
+  - Output **only** the YAML list, strictly following the format below.
+  
+Format the output as YAML:
 ```yaml
 - 2 # FoundationalConcept
 - 0 # CoreClassA

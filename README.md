@@ -2,6 +2,18 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
+> **This is a fork of [`The-Pocket/Tutorial-Codebase-Knowledge`](https://github.com/The-Pocket/Tutorial-Codebase-Knowledge)**
+
+
+## 🆕 What's New in This Fork?
+
+- **Local Model Support:**
+  - Run models directly on your machine for full data privacy and offline capability.
+  - Compatible with any OpenAI-style local API server (e.g., LM Studio, Ollama, LocalAI).
+  - Works with popular local models like Mistral, LLaMA, Gemma, and more.
+
+---
+
 > *Ever stared at a new codebase written by others feeling completely lost? This tutorial shows you how to build an AI agent that analyzes GitHub repositories and creates beginner-friendly tutorials explaining exactly how the code works.*
 
 <p align="center">
